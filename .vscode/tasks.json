@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "F:\\C++\\Build\\${fileBasenameNoExtension}.exe",
+                "${fileBasenameNoExtension}.exe",
                 "-fexec-charset=GBK"
             ],
             "options": {
