@@ -9,11 +9,11 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileBasenameNoExtension}.exe",
+                "F:\\C++\\Build\\${fileBasenameNoExtension}.exe",
                 "-fexec-charset=GBK"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "F:\\C++\\Build"
             },
             "problemMatcher": [
                 "$gcc"
