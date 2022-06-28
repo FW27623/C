@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef int ElemType;
+typedef int ElemType;//定义数据类型
 typedef struct LNode{
-    ElemType data;
+    ElemType data;//数据域
     struct LNode *next;//指向下一个节点
 }LNode, *LinkList;
 
