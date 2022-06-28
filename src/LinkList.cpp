@@ -42,24 +42,6 @@ LinkList CreatList2(LinkList &L){
     return L;
 }
 
-//删除第i个节点
-bool ListDelete(LinkList &L, int i){
-    int j = 1;
-    LinkList p = L;
-    while(p->next != NULL && j < i){
-        p = p->next;
-        j++;
-    }
-    if(j == i){
-        LinkList q = p->next;
-        p->next = q->next;
-        free(q);
-        return true;
-    }else{
-        return false;
-    }
-}
-
 //按值查找
 LNode *GetElem(LinkList L, ElemType e){
     while(L->next != NULL && L->data != e){
@@ -92,16 +74,34 @@ LNode *GetElem1(LinkList L, int i){
 //新节点插入到第i个位置
 bool ListInsert(LinkList &L, int i, ElemType e){
     int j = 1;
+    LinkList p = L;//让p指向头结点
+    while(p->next != NULL && j < i){
+        p = p->next;//让p指向第i个节点
+        j++;
+    }
+    if(j == i){
+        LinkList q = (LinkList)malloc(sizeof(LNode));
+        q->data = e;//把e存入q的data域
+        q->next = p->next;//把q的指针指向p的指针
+        p->next = q;//把p的指针指向q
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//删除第i个节点
+bool ListDelete(LinkList &L, int i){
+    int j = 1;
     LinkList p = L;
     while(p->next != NULL && j < i){
         p = p->next;
         j++;
     }
     if(j == i){
-        LinkList q = (LinkList)malloc(sizeof(LNode));
-        q->data = e;
-        q->next = p->next;
-        p->next = q;
+        LinkList q = p->next;
+        p->next = q->next;
+        free(q);
         return true;
     }else{
         return false;
