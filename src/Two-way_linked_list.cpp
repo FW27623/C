@@ -115,10 +115,12 @@ int main(){
     // head_insert(DL);
     // printf("头插法创建链表:");
     // print_list(DL);
+
     //尾插法创建链表
     tail_insert(DL);
     printf("尾插法创建链表:");
     print_list(DL);
+
     //按值查找
     DNode *p = search(DL, 6);
     if(p!=NULL){
@@ -128,6 +130,7 @@ int main(){
     else{
         printf("not found\n");
     }
+
     //按位置查找
     p = search_pos(DL, 3);
     if(p!=NULL){
@@ -137,10 +140,12 @@ int main(){
     else{
         printf("not found\n");
     }
+
     //新节点插入到指定位置
     p = insert_pos(DL, 3, 8);
     printf("新节点插入到指定位置成功：");
     print_list(DL);
+    
     //删除指定位置的节点
     p = delete_pos(DL, 4);
     printf("删除指定位置的节点成功：");
