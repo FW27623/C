@@ -112,9 +112,9 @@ void print_list(DLinkList DL){
 int main(){
     DLinkList DL;
     //头插法创建链表
-    // head_insert(DL);
-    // printf("头插法创建链表:");
-    // print_list(DL);
+    head_insert(DL);
+    printf("头插法创建链表:");
+    print_list(DL);
 
     //尾插法创建链表
     tail_insert(DL);
