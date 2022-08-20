@@ -1,3 +1,4 @@
+//从有序顺序表中删除其值在给定值s与t之间（要求s<t）的所有元素。若s或t取值不合理或顺序表为空。则显示出错信息并退出运行。
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

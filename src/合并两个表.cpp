@@ -1,3 +1,4 @@
+//将两个有序顺序表。合并为一个新的有序顺序表。并由函数返回结果顺序表。
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
