@@ -15,17 +15,17 @@ bool merge_two_sqlist(sqList &L1, sqList &L2, sqList &L3){
         return false;
     }
     while(i<L1.length&&j<L2.length){
-        if(L1.data[i]<L2.data[j]){
-            L3.data[k++]=L1.data[i++];
+        if(L1.data[i]<L2.data[j]){//如果L1的元素小于L2的元素
+            L3.data[k++]=L1.data[i++];//将L1的元素放入L3中
         }else{
-            L3.data[k++]=L2.data[j++];
+            L3.data[k++]=L2.data[j++];//将L2的元素放入L3中
         }
     }
     while(i<L1.length){
-        L3.data[k++]=L1.data[i++];
+        L3.data[k++]=L1.data[i++];//表L1中剩余的元素直接追加到表L3中
     }
     while(j<L2.length){
-        L3.data[k++]=L2.data[j++];
+        L3.data[k++]=L2.data[j++];//表L2中剩余的元素直接追加到表L3中
     }
     L3.length=k;
     return true;
